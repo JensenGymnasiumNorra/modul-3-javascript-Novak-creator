@@ -11,12 +11,28 @@
     </style>
   </head>
   <body>
-    <button onclick="showCarbonara()">Show carbonara ingredients</button>
-    <button onclick="showPizza()">Show pizza ingredients</button>
+    <button onclick="showfood('Carbonara')">Show carbonara ingredients</button>
+    <button onclick="showfood('Pizza')">Show pizza ingredients</button>
 
     <div id="ingredients"></div>
 
     <script>
+  
+
+      function showfood(Food) {
+        const ingredientdiv = document.getElementById("ingredients");
+
+        if(Food === "Pizza") {
+           ingredientdiv.innerHTML = "Pizza ingredients:"
+
+        }
+
+        if(Food === "Carbonara") {
+          ingredientdiv.innerHTML = "Carbonara ingredients:"
+        }
+
+
+      }
       // TODO: Skapa funktionerna showCarbonara() och showPizza() för att visa ingredienserna för respektive recept i diven ingredients
     </script>
   </body>
