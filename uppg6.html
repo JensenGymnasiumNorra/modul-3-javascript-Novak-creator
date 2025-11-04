@@ -18,8 +18,44 @@
     <input type="text" id="num2" placeholder="Enter number 2" />
     <br /><br />
     <button onclick="calculateSum()">+</button>
+    <button onclick="calculateSumSub()">-</button>
+    <button onclick="calculateMulti()">*</button>
+    <button onclick="calculateDiv()">/</button>
 
     <p id="result">Result:</p>
   </body>
-  <script src="simple_calculator.js"></script>
+  <script>
+    //jag vet ej om den här sättet är mest effektiv.
+    function calculateSum() {
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let num2 = parseFloat(document.getElementById('num2').value);
+    let sum = num1 + num2;
+    document.getElementById('result').innerHTML = 'Result: ' + sum;
+}
+   function calculateSumSub() {
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let num2 = parseFloat(document.getElementById('num2').value);
+    let sum = num1 - num2;
+    document.getElementById('result').innerHTML = 'Result: ' + sum;
+    
+
+   }
+
+   function calculateMulti() {
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let num2 = parseFloat(document.getElementById('num2').value);
+    let sum = num1 * num2;
+    document.getElementById('result').innerHTML = 'Result: ' + sum;
+
+   }
+
+   function calculateDiv() {
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let num2 = parseFloat(document.getElementById('num2').value);
+    let sum = num1 / num2;
+    document.getElementById('result').innerHTML = 'Result: ' + sum;
+
+   }
+
+  </script>
 </html>
