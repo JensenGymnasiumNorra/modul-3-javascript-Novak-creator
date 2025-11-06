@@ -2,9 +2,9 @@
 // Den har självklart andra variabelnamn och annan funktionalitet än vad du behöver
 // Använ ddenna fil som utgångspunkt för att lösa uppgiften eller skriv din egen kod
 
-let temperatureSlider = document.getElementById("temperatureSlider");
-let selectedTemperatureElement = document.getElementById("selectedTemperature");
-let weatherMessageElement = document.getElementById("weatherMessage");
+let temperatureSlider = document.getElementById("valueSlider");
+let selectedTemperatureElement = document.getElementById("selectedNumber");
+let weatherMessageElement = document.getElementById("hint");
 
 // Initial display of selected temperature
 selectedTemperatureElement.innerText = temperatureSlider.value + "°C";
@@ -29,9 +29,14 @@ function updateWeatherMessage(temperature) {
     } else if (temperature <= 30 && temperature >= 20) {
         weatherMessageElement.innerText = "The weather is pleasant.";
         weatherMessageElement.style.color = "green";
-    } else {
+
+    } 
+    
+    else {
         weatherMessageElement.innerText = "It's a bit chilly.";
         weatherMessageElement.style.color = "blue";
     }
-}
 
+
+
+}
